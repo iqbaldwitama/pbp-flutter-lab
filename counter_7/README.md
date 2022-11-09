@@ -44,5 +44,26 @@ Const dan Final keduanya digunakan untuk menjaga value dari suatu variable stati
 
 ### Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
 
-- [x] Membuat project Flutter baru dengan cara masuk ke dalam directory `pbp-flutter-lab` dan menjalankan command `flutter create counter_7` pada cmd.
-- [x] Mengubah tampilan dengan mengganti title pada MyHomePage dengan `home: const MyHomePage(title: "Program Counter")`. Selanjutnya mengganti teks yang akan 
+- Membuat project Flutter baru dengan cara masuk ke dalam directory `pbp-flutter-lab` dan menjalankan command `flutter create counter_7` pada cmd.
+- Mengubah tampilan dengan mengganti title pada MyHomePage dengan `home: const MyHomePage(title: "Program Counter")`.
+- Mengubah teks di atas counter sesuai dengan kondisi counter ganjil atau genap dengan cara menambahkan `(_counter % 2 == 0) ?` dan disesuaikan display teksnya.
+- Mengimplementasikan fungsi `_incrementCounter()` pada tombol + dan menambahkan event ketika onPressed.
+- Mengimplementasikan fungsi `_decrementCounter()` pada tombol - dan menambahkan event ketika onPressed. Ada perbeedaan untuk bonus, yaitu menambahkan kondisi bahwa tombol decrement hanya muncul pada saat counter > 0, sehingga menambahkan `if (_counter > 0)`.
+- Mengimplementasikan layouting dengan menambahkan 
+```
+floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked
+floatingActionButton: Padding(
+  padding: const EdgeInsets.all(20),
+  child: Row(
+    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+    children: <Widget>[
+      Align(
+        ...
+      ),
+      Align(
+        ...
+      )
+    ],
+  ),
+)
+```
