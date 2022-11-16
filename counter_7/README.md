@@ -1,13 +1,16 @@
-# counter_7
-A Simple Counter Flutter project.
+# PBP - *Flutter Lab*
+## Jump to:
+➡️ [TUGAS 7](#tugas-7) </br>
+➡️ [TUGAS 8](#tugas-8) </br>
 
+# TUGAS 7
 ### Jelaskan apa yang dimaksud dengan stateless widget dan stateful widget dan jelaskan perbedaan dari keduanya.
 
 ***Stateless Widget***
 <br>
 Stateless Widget adalah widget yang state-nya bersifat statis (tidak dapat berubah atau tidak akan pernah berubah). Widget ini bersifat immutable tepat ketika mereka dibuat. Contohnya seperti perubahan apapun pada variable, icon, button, ataupun data tidak dapat mengubah state dari aplikasi tersebut.
 
-Stateful Widget
+***Stateful Widget***
 
 Stateful Widget adalah widget yang state-nya bersifat dinamis (dapat berubah). Widget ini bersifat mutable sehingga dapat diganti selama berulang kali pada saat runtime. Contohnya seperti checkbox, radio button, slider.
 
@@ -67,3 +70,59 @@ floatingActionButton: Padding(
   ),
 )
 ```
+
+# TUGAS 8
+
+### Jelaskan perbedaan `Navigator.push` dan `Navigator.pushReplacement`.
+
+`Navigator.push` berfungsi untuk menambahhkan route ke dalam stack `Route` yang di atur oleh `Navigator`. Sehingga ketika kita melakukan push routing, jumlah routing dalam stack tersebut akan bertambah. Berbeda dengan `Navigator.push`, `Navigator.pushReplacement` akan menghapus route sebelumnya dan melakukan push route baru yang ingin dituju (direplace).
+
+### Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+
+Selain widget yang telah disebutkan pada [Tugas 7](#tugas-7), ada beberapa widget yang digunakan pada tugas 8 ini, antara lain:
+
+1. Drawer</br>
+Drawer adalah widget dalam flutter yang berfungsi untuk menyediakan routing-routing yang dapat dilakukan pada suatu aplikasi.
+
+2. Navigator</br>
+Navigator adalah widget dalam flutter yang berfungsi untuk menuju routing halaman lain.
+
+3. ListTile</br>
+ListTile adalah widget dalam flutter yang berfungsi sebagai semacam row dengan height yang tetap.
+
+4. Form</br>
+Form adalah widget dalam flutter yang berfungsi untuk mengelompokkan beberapa form field.
+
+5. TextFormField</br>
+TextFormField adalah widget dalam flutter yang berfungsi untuk menampung text field pada sebuah form field.
+
+6. DropdownButtonFormField</br>
+DropdownButtonFormField adalah widget dalam flutter yang berfungsi untuk menampung list of item dalam bentuk dropdown.
+
+7. TextButton</br>
+TextButton adalah widget dalam flutter yang berfungsi sebagai button yang memiliki fungsi ketika ditekan.
+
+8. Card</br>
+Card adalah suatu widget dalam flutter yang berfungsi untuk menampilkan suatu text.
+
+### Sebutkan jenis-jenis event yang ada pada Flutter (contoh:: onPressed).
+
+- `onPressed`
+- `onHover`
+- `onTap`
+- `onChanged`
+- `onLongPress`
+- `onSaved`
+
+### Jelaskan bagaimana cara kerja Navigator dalam "mengganti" halaman dari aplikasi Flutter.
+
+Widget `Navigator` pada flutter bekerja dengan sebuah stack of `Routes` yang berisikan halaman yang diakses oleh user. Widget ini bekerja dengan menampilkan halaman yang paling atas pada stack of `Routes`. Seperti stack pada umumnya, `Navigator` memiliki method untuk melakukan pergantian dengan `Navigator.pop` yang digunakan untuk kembali ke halaman sebelumnya ataupun `Navigator.push` yang berfungsi untuk menavigasikan ke halaman yang baru.
+
+### Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+
+- Membuat file baru yaitu `form.dart` untuk menerima dan menyimpan input yang dimasukkan oleh user dalam suatu list.
+- Membuat widget `TextFormField()` pada `form.dart` dengan property onSaved, onChanged, dan validator untuk menyimpan datanya pada list yang telah dibuat (judul dan budget). 
+- Membuat widget `DropdownButtonFormField()` pada `form.dart` dengan property items, onChanged, onSaved, dan validator untuk menyimpan datanya pada list yang telah dibuat (jenis).
+- Menambahkan `TextButton()` pada `form.dart`untuk melakukan penyimpanan dan reset form.
+- Membuat file baru yaitu `data.dart` untuk menampilkan judul, budget, dan jenis yang telah diisi oleh user pada form dengan menggunakan card.
+- Membuat file baru bernama `drawer.dart` untuk melakukan refactor widget Drawer ke file yang terpisah. Drawer ini untuk melakukan routing pada dari satu halaman ke halaman lainnya.
