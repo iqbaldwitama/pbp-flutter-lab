@@ -2,6 +2,7 @@
 ## Jump to:
 ➡️ [TUGAS 7](#tugas-7) </br>
 ➡️ [TUGAS 8](#tugas-8) </br>
+➡️ [TUGAS 9](#tugas-9) </br>
 
 # TUGAS 7
 ### Jelaskan apa yang dimaksud dengan stateless widget dan stateful widget dan jelaskan perbedaan dari keduanya.
@@ -126,3 +127,26 @@ Widget `Navigator` pada flutter bekerja dengan sebuah stack of `Routes` yang ber
 - Menambahkan `TextButton()` pada `form.dart`untuk melakukan penyimpanan dan reset form.
 - Membuat file baru yaitu `data.dart` untuk menampilkan judul, budget, dan jenis yang telah diisi oleh user pada form dengan menggunakan card.
 - Membuat file baru bernama `drawer.dart` untuk melakukan refactor widget Drawer ke file yang terpisah. Drawer ini untuk melakukan routing pada dari satu halaman ke halaman lainnya.
+
+# Tugas 9
+
+### Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+
+Jawawbannya adalah ya, pengambilan data JSON tanpa membuat model dapat dilakukan. JSON sendiri merupakan suatu object dalam notasi Javascript di mana pada bahasa Dart ekuivalen dengan Map (terdiri dari key dan value pair). Namun, pengambilan data JSON tanpa mengonversikannya terlebih dahulu ke dalam suatu model bukanlah cara terbaik dalam implementasinya. Pengonversian ini bertujuan untuk meminimalisasi kesahalan saat pengambilan data melalui http request yang akan ditampilkan pada aplikasi.
+
+### Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+
+### Jelaskan mekanisme pengambilan data dari json hingga dapat ditampilkan pada Flutter.
+
+- Membuat sebuah function `http request` dengan method `GET` secara asynchronous untuk mengambil data dari pihak eksternal.
+- Lakukan parsing pada function tersebut dengan melakukan `jsonDecode()` yang bertujuan untuk mengubah response dari type String menjadi JSON.
+- Konversi object JSON ke dalam suatu Model Object.
+- Menampilkan data-data terbaru yang telah dikonversi menjadi sebuah object dengan menggunakan widget `FutureBuilder`.
+
+### Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+
+- Membuat file baru dengan nama `myWatchListModel.dart` yang menyimpan suatu model untuk watchlist.
+- Menambahkan dependency `http` yang digunakan untuk melakukan fetching data JSON dari `https://django-project-iqbal.herokuapp.com/mywatchlist/json/`
+- Membuat file baru bernama `myWatchlist.dart` yang menampilkan data-data dari myWatchlist yang sudah di fetch dengan menggunakan card.
+- Membuat masing-masing dari card tersebut clickable dan routing ke `MyDetailPage` card.
+- Menampilkan detail dari data-data tersebut pada halaman `detail.dart` card yang sesuai.
