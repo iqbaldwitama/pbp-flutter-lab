@@ -1,5 +1,5 @@
+import 'package:counter_7/widget/drawer.dart';
 import 'package:flutter/material.dart';
-import 'package:counter_7/drawer.dart';
 
 void main() {
   runApp(const MyApp());
