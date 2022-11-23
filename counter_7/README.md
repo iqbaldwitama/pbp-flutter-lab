@@ -136,6 +136,23 @@ Jawawbannya adalah ya, pengambilan data JSON tanpa membuat model dapat dilakukan
 
 ### Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
 
+Selain widget yang telah disebutkan pada [Tugas 7](#tugas-7) dan [Tugas 8](#tugas-8), ada beberapa widget yang digunakan pada tugas 9 ini, antara lain:
+
+1. FutureBuilder</br>
+FutureBuilder adalah widget dalam flutter yang digunakan untuk membuat widgets berdasarkan pada snapshot terakhir yang berkaitan dengan `Future`.
+
+2. CircularProgressIndicator</br>
+CircularProgressIndicator adalah widget dalam flutter yang digunakan untuk menunjukkan suatu progress melalui sebuah lingkaran.
+
+3. InkWell</br>
+InkWell adalah widget dalam flutter yang digunakan agar sebuah area segiempat dapat merespon terhadap sentuhan.
+
+4. Checkbox</br>
+Checkbox adalah widget dalam flutter yang digunakan untuk menunjukkan sebuah checkbox.
+
+5. Flexible
+Flexible adalah widget dalam flutter yang digunakan untuk mengontrol row dan column yang kemudian flex akan mengisi space kosongnya.
+
 ### Jelaskan mekanisme pengambilan data dari json hingga dapat ditampilkan pada Flutter.
 
 - Membuat sebuah function `http request` dengan method `GET` secara asynchronous untuk mengambil data dari pihak eksternal.
